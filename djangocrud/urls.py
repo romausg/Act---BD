@@ -1,5 +1,5 @@
 """
-URL configuration for djangocrud project.
+URL configuration for mi_grupo_personal project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -20,14 +20,14 @@ from tasks import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home, name='home'),
-    path('signup/',views.signup,name='signup'),
-    path('tasks/',views.tasks,name='tasks'),
-    path('tasks/create/',views.create_task,name='create_task'),
-    path('tasks_completed/',views.tasks_completed,name='tasks_completed'),
-    path('tasks/<int:task_id>/',views.task_detail,name='task_detail'),
-    path('tasks/<int:task_id>/complete',views.complete_task,name='complete_task'),
-    path('tasks/<int:task_id>/delete',views.delete_task,name='delete_task'),
-    path('logout/',views.signout,name='logout'),
-    path('signin/',views.signin,name='signin'),
+    path('',views.home, name='inicio'),
+    path('registro/',views.signup,name='registro'),
+    path('actividades/',views.tasks,name='actividades'),
+    path('actividades/crear/',views.create_task,name='crear_actividad'),
+    path('actividades/completadas/',views.tasks_completed,name='actividades_completadas'),
+    path('actividades/<int:task_id>/',views.task_detail,name='detalle_actividad'),
+    path('actividades/<int:task_id>/completar',views.complete_task,name='completar_actividad'),
+    path('actividades/<int:task_id>/eliminar',views.delete_task,name='eliminar_actividad'),
+    path('cerrar-sesion/',views.signout,name='cerrar_sesion'),
+    path('iniciar-sesion/',views.signin,name='iniciar_sesion'),
 ]

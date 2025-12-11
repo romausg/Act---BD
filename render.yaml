@@ -3,7 +3,7 @@ services:
     name: ti-quiero-ti
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn djangocurd.wsgi:application"
+    startCommand: "gunicorn mi_grupo_personal.wsgi:application"
     runtime: python
     pythonVersion: 3.13.4
     plan: free
